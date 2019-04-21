@@ -13,6 +13,11 @@ namespace Tests
         {
         }
 
+        private LogAnalyzer MakeAnalyzer()
+        {
+            return new LogAnalyzer();
+        }
+
         [Test]
         public void IsValidLogFileName_BadExtension_ReturnsFalse()
         {
@@ -75,9 +80,20 @@ namespace Tests
             var exception = Assert.Throws<ArgumentException>(() => logAnalyzer.IsValidLogFileName(""));
 
             Assert.That(
-                exception.Message, 
+                exception.Message,
                 Does.Contain("filename has to be provided")
             );
+        }
+
+        [TestCase("bad_filename.foo", false)]
+        [TestCase("good_filename.slf", true)]
+        public void IsValidLogFileName_WhenCalled_ChangesWasLastFileNameValid(string fileName, bool expected)
+        {
+            LogAnalyzer logAnalyzer = MakeAnalyzer();
+
+            logAnalyzer.IsValidLogFileName(fileName);
+
+            Assert.AreEqual(expected, logAnalyzer.WasLastFileNameValid);
         }
     }
 }
