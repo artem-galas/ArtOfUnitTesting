@@ -4,9 +4,11 @@ dist: xenial
 sudo: false
 mono: none
 before_script:
-  - dotnet restore Chap02_FirstTest/LogAn/LogAn.csproj 
+  - dotnet restore Chap02_FirstTest/LogAn/LogAn.csproj
+  - dotnet restore Chap03_Stub/LogAn/LogAn.csproj
 script:
   - dotnet test Chap02_FirstTest/LogAn.UnitTests/LogAn.UnitTests.csproj
+  - dotnet test Chap03_Stub/LogAn.UnitTests/LogAn.UnitTests.csproj
 global:
   - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true
   - DOTNET_CLI_TELEMETRY_OPTOUT=1
