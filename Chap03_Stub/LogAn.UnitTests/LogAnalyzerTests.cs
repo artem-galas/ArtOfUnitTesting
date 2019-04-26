@@ -29,6 +29,25 @@ namespace Tests
             // Assert
             Assert.True(result);
         }
+
+        [Test]
+        public void IsValidFileName_SupportedExtension_ReturnsTrue()
+        {
+            //set up the stub to use, make sure it returns true
+            var myFakeExtensionManager = new FakeExtensionManager {
+                WillBeValid = true
+            };
+
+            // set stub into factrory class for this test
+            ExtensionManagerFactory.SetManager(myFakeExtensionManager);
+            LogAnalyzer logAnalyzer = new LogAnalyzer();
+
+            // Act
+            bool result = logAnalyzer.IsValidLogFileName("validFileName.ext");
+
+            // Assert
+            Assert.True(result);
+        }
     }
 
     /// The fake extension manager is located in the same file as the test code 
