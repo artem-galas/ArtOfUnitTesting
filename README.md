@@ -94,4 +94,5 @@ dotnet tests
   - `FileIExtensionManager` - class that describe how file system should be validate file extension (for us just return some `bool` value)
   - `IExtenstionManager` - interface which makes `LogAnalyzer` class more testable. Because we can *change* implementation in our test.
   - `ExtensionManagerFactory` - factory class that can create custom manager
+  - `LogAnalyzerUsingFactoryMethod` - class that using virtual method which can be override into test
 - `LogAn.UnitTests` - unit test project for testing `LogAn`

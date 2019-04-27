@@ -11,7 +11,7 @@ namespace LogAn
             {
                 return customManager;
             }
-            return new FileIExtensionManager();
+            return new FileExtensionManager();
         }
 
         public static void SetManager(IExtensionManager manager)

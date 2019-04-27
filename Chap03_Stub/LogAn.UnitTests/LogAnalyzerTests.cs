@@ -24,7 +24,7 @@ namespace Tests
             LogAnalyzer logAnalyzer = new LogAnalyzer(fakeExtensionManager);
 
             // Act
-            bool result = logAnalyzer.IsValidLogFileName("short.ext");
+            bool result = logAnalyzer.IsValidLogFileName("shortValidName.ext");
 
             // Assert
             Assert.True(result);
@@ -38,7 +38,7 @@ namespace Tests
                 WillBeValid = true
             };
 
-            // set stub into factrory class for this test
+            // set stub into factory class for this test
             ExtensionManagerFactory.SetManager(myFakeExtensionManager);
             LogAnalyzer logAnalyzer = new LogAnalyzer();
 
@@ -47,18 +47,6 @@ namespace Tests
 
             // Assert
             Assert.True(result);
-        }
-    }
-
-    /// The fake extension manager is located in the same file as the test code 
-    /// because currently the fake is used only from within this test class.
-    internal class FakeExtensionManager : IExtensionManager
-    {
-        public bool WillBeValid = false;
-
-        public bool IsValid(string fileName)
-        {
-            return WillBeValid;
         }
     }
 }
