@@ -7,10 +7,12 @@ before_script:
   - dotnet restore Chap02_FirstTest/LogAn/LogAn.csproj
   - dotnet restore Chap03_Stub/LogAn/LogAn.csproj
   - dotnet restore Chap04_Mock/LogAn/LogAn.csproj
+  - dotnet restore Chap05_Mocking_Frameworks/LogAn/LogAn.csproj
 script:
   - dotnet test Chap02_FirstTest/LogAn.UnitTests/LogAn.UnitTests.csproj
   - dotnet test Chap03_Stub/LogAn.UnitTests/LogAn.UnitTests.csproj
   - dotnet test Chap04_Mock/LogAn.UnitTests/LogAn.UnitTests.csproj
+  - dotnet test Chap05_Mocking_Frameworks/LogAn.UnitTests/LogAn.UnitTests.csproj
 global:
   - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true
   - DOTNET_CLI_TELEMETRY_OPTOUT=1

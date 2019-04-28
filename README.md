@@ -106,3 +106,11 @@ Since than we have two dependency and both of them don't return any value.
 We should create Stub and Mock:
   - `FakeWebService` - fake class that can simulate Exception 
   - `FakeEmailService` - fake class that simulate `SendEmail` method (implement `IEmailService`)
+
+### 05. Isolation (mocking) frameworks
+- `LogAn` - classlib project.
+  - `LogAnalyzer` - simple class that using
+  - `LogAnalyzer2` - class that using for showing how to deal with dependency using [NSubstitute](https://nsubstitute.github.io/)
+- `LogAn.UnitTests` - unit test project for testing.
+  - `LogAnalyzerTests` - shows basic NSubstitute features
+  - `LogAnalyzer2Tests` - shows how to mock and stub more dependency using NSubstitute
