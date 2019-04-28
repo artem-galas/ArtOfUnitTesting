@@ -111,6 +111,8 @@ We should create Stub and Mock:
 - `LogAn` - classlib project.
   - `LogAnalyzer` - simple class that using
   - `LogAnalyzer2` - class that using for showing how to deal with dependency using [NSubstitute](https://nsubstitute.github.io/)
+  - `Presenter` - class which using Action from `IView` interface 
 - `LogAn.UnitTests` - unit test project for testing.
   - `LogAnalyzerTests` - shows basic NSubstitute features
   - `LogAnalyzer2Tests` - shows how to mock and stub more dependency using NSubstitute
+  - `PresenterTests` - shows how to mock different Actions
