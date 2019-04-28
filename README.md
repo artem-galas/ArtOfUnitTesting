@@ -86,9 +86,11 @@ dotnet tests
 
 ## Chapters
 ### 01. The basics of unit testing
+
 ### 02. A first unit test
 - `LogAn` - classlib project that has two simple classes.
 - `LogAn.UnitTests` - unit test project for testing `LogAn` project
+
 ### 03. Using Stubs to break dependencies
 - `LogAn` - this is a pretty the same as at `Chap02_FirstTest` but let's imagine we have dependency of FileSystem that validate file extension.
   - `FileIExtensionManager` - class that describe how file system should be validate file extension (for us just return some `bool` value)
@@ -96,3 +98,11 @@ dotnet tests
   - `ExtensionManagerFactory` - factory class that can create custom manager
   - `LogAnalyzerUsingFactoryMethod` - class that using virtual method which can be override into test
 - `LogAn.UnitTests` - unit test project for testing `LogAn`
+
+### 04. Interaction testing using mock objects
+- `LogAn` - classlib project. We have two dependency - `EmailService` and `WebService` and into `Analyze` we have to decide which service should be called.
+- `LogAn.UnitTests` - unit test project for testing `LogAn`.
+Since than we have two dependency and both of them don't return any value.
+We should create Stub and Mock:
+  - `FakeWebService` - fake class that can simulate Exception 
+  - `FakeEmailService` - fake class that simulate `SendEmail` method (implement `IEmailService`)
