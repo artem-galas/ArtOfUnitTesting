@@ -1,4 +1,4 @@
-namespace LogAn
+namespace Chap03.LogAn
 {
     public class LogAnalyzerUsingFactoryMethod
     {

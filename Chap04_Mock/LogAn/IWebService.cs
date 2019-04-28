@@ -1,4 +1,7 @@
-public interface IWebService
+namespace Chap04.LogAn
 {
-    void LogError(string message);
+    public interface IWebService
+    {
+        void LogError(string message);
+    }
 }

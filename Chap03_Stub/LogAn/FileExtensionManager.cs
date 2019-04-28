@@ -1,4 +1,4 @@
-namespace LogAn
+namespace Chap03.LogAn
 {
     // defines the extract class
     public class FileExtensionManager : IExtensionManager

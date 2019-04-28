@@ -2,16 +2,12 @@ using System;
 
 using NUnit.Framework;
 
-using LogAn;
+using Chap04.LogAn;
 
-namespace Tests
+namespace Chap04.Tests
 {
     public class LogAnalyzerTests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
 
         [Test]
         public void Analyze_WebServiceThrows_SendsEmail()

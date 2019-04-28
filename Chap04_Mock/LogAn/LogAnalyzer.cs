@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LogAn
+namespace Chap04.LogAn
 {
     public class LogAnalyzer
     {

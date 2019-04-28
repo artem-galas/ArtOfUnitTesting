@@ -1,4 +1,4 @@
-namespace LogAn
+namespace Chap02.LogAn
 {
     public class MemCalculator
     {

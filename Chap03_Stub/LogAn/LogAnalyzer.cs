@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace LogAn
+namespace Chap03.LogAn
 {
     public class LogAnalyzer
     {

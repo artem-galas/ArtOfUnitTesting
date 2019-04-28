@@ -2,9 +2,9 @@ using System;
 
 using NUnit.Framework;
 
-using LogAn;
+using Chap02.LogAn;
 
-namespace Tests
+namespace Chap02.Tests
 {
     class MemCalculatorTests
     {

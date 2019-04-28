@@ -2,16 +2,12 @@ using System;
 
 using NUnit.Framework;
 
-using LogAn;
+using Chap02.LogAn;
 
-namespace Tests
+namespace Chap02.Tests
 {
     public class LogAnalyzerTests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
 
         private LogAnalyzer MakeAnalyzer()
         {
@@ -25,7 +21,7 @@ namespace Tests
             LogAnalyzer logAnalyzer = new LogAnalyzer();
 
             // Act
-            bool result = logAnalyzer.IsValidLogFileName("file_with_bad_extention.foo");
+            bool result = logAnalyzer.IsValidLogFileName("file_with_bad_extension.foo");
 
             // Assert
             Assert.False(result);
@@ -35,7 +31,7 @@ namespace Tests
         public void IsValidLogFileName_GoodExtentionLowerCase_ReturnsTrue()
         {
             LogAnalyzer logAnalyzer = new LogAnalyzer();
-            bool result = logAnalyzer.IsValidLogFileName("file_with_good_extention.slf");
+            bool result = logAnalyzer.IsValidLogFileName("file_with_good_extension.slf");
 
             Assert.True(result);
         }
@@ -44,14 +40,14 @@ namespace Tests
         public void IsValidLogFileName_GoodExtentionUpperCase_ReturnsTrue()
         {
             LogAnalyzer logAnalyzer = new LogAnalyzer();
-            bool result = logAnalyzer.IsValidLogFileName("file_with_good_extention.SLF");
+            bool result = logAnalyzer.IsValidLogFileName("file_with_good_extension.SLF");
 
             Assert.True(result);
         }
 
         // parameterized test - refactor previous two tests
-        [TestCase("file_with_good_extention.SLF")]
-        [TestCase("file_with_good_extention.slf")]
+        [TestCase("file_with_good_extension.SLF")]
+        [TestCase("file_with_good_extension.slf")]
         public void IsValidLogFileName_ValidExtention_ReturnTrue(string fileName)
         {
             LogAnalyzer logAnalyzer = new LogAnalyzer();

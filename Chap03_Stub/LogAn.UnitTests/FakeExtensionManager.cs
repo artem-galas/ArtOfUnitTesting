@@ -1,6 +1,6 @@
-using LogAn;
+using Chap03.LogAn;
 
-namespace Tests
+namespace Chap03.Tests
 {
     class FakeExtensionManager : IExtensionManager
     {

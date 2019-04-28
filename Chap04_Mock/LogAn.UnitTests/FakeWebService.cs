@@ -1,8 +1,8 @@
 using System;
 
-using LogAn;
+using Chap04.LogAn;
 
-namespace Tests
+namespace Chap04.Tests
 {
     public class FakeWebService : IWebService
     {

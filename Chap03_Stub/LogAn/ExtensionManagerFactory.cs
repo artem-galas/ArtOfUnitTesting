@@ -1,4 +1,4 @@
-namespace LogAn
+namespace Chap03.LogAn
 {
     // Defines factory that can use and return custom manager
     public class ExtensionManagerFactory

@@ -1,8 +1,8 @@
 using NUnit.Framework;
 
-using LogAn;
+using Chap03.LogAn;
 
-namespace Tests
+namespace Chap03.Tests
 {
     public class LogAnalyzerTests
     {
